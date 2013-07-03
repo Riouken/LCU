@@ -14,7 +14,7 @@
 
 class CfgPatches
 {
-	class PREFIX  // DIS - Dive Intergration System
+	class PREFIX  // LCU - Landing Craft Utility
 		{
 			units[] = {};
 			weapons[] = {};
