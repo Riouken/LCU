@@ -1,6 +1,6 @@
 // LCU - Landing Craft Utility
 //
-#define PREFIX DIS
+#define PREFIX LCU
 #define COMPONENT main
 #define MAJOR 1
 #define MINOR 0
@@ -18,6 +18,7 @@ class CfgPatches
 		{
 			units[] = {};
 			weapons[] = {};
+			vehicles[] = {};
 			requiredVersion = REQUIRED_VERSION;
 			requiredAddons[] = {"CBA_MAIN"};
 			versionDesc = "LCU - 1.0";
@@ -44,7 +45,7 @@ class Extended_PostInit_EventHandlers
 	class PREFIX
 	{
 		//clientInit = QUOTE(call COMPILE_FILE2(\DIS\init.sqf));
-		//clientInit = "call ('\LCU\init.sqf' call SLX_XEH_COMPILE)";
+		clientInit = "call ('\LCU\init.sqf' call SLX_XEH_COMPILE)";
 	};
 };
 
@@ -54,5 +55,11 @@ class Extended_PostInit_EventHandlers
 
 class CfgVehicles
 {
+
+	class B_Boat_Armed_01_minigun_F;
+	class LCU_Transport : B_Boat_Armed_01_minigun_F {
+
+		displayname = "LCU Transport";
+	};
 
 };
